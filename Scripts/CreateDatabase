@@ -1,0 +1,41 @@
+/*
+========================================================================
+-- Create Database Warehouse 
+========================================================================
+
+Script Purpose:
+
+	This script creates a new database named RetailSupermarket after cheking if it already exists.
+	If thr database exists, it is dropped and recreated. Additionally the script sets up three schemas within the database: bronze, silver and gold:
+
+	Warning: 
+	Running this script will drop the entire RetailSupermarket database if it exist
+	All data in the database will be permanently deleted. Proceed with caution andensure you have proper backups before running this script. 
+*/
+
+USE master;
+GO
+
+  -- Drop and recreate the warehouse
+  If EXISTS (SELECT 1 from sys.databases WHERE name = 'RetailSupermarket')
+  BEGIN 
+    ALTER DATABASE RetailSupermarket SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+DROP DATABASE RetailSupermarket;
+END;
+GO 
+
+  
+--Create the DataWarehouse database
+CREATE DATABASE RetailSupermarket;
+GO
+
+USE RetailSupermarket;
+GO
+
+  -- Create the Schemas
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
+GO
