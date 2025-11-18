@@ -15,13 +15,15 @@ IF OBJECT_ID ('bronze.supermarket_info' , 'U') IS NOT NULL
 
 CREATE TABLE bronze.supermarket_info(
 Item_Fat_Content NVARCHAR(50),
-Item_id NVARCHAR(50),
-Outlet_Establishment_Year Date,
+Item_Identifier NVARCHAR(50),
+Item_Type NVARCHAR(50),
+Outlet_Establishment_Year INT,
+Outlet_Identifier NVARCHAR(50),
 Outlet_Location_Type NVARCHAR(50),
 Outlet_Size NVARCHAR(50),
 Outlet_Type NVARCHAR(50),
 Item_Visibility FLOAT, 
 Item_Weight FLOAT,
 Sales FLOAT,
-Rating INT
+Rating FLOAT
 );
