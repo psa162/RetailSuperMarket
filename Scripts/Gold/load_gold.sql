@@ -17,6 +17,10 @@ Usage:
   EXEC gold.load_blink_sales_summary;
 */
 
+
+
+EXEC gold.load_blink_sales_summary;
+
 CREATE OR ALTER PROCEDURE gold.load_blink_sales_summary AS
 BEGIN
     DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
