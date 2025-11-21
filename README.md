@@ -43,7 +43,7 @@ Follows the **Medallion Pattern**:
 
 ---
 
-![Power BI Dashboard](docs/blinkit_powebi_view.png)
+![Power BI Dashboard](docs/blinkit_powerbi_view.png)
 
 ### 📦 Deliverables
 | 📁 Deliverable | 🧾 Location |
