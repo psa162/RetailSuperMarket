@@ -26,9 +26,8 @@ Implements the **Medallion** pattern (Bronze → Silver → Gold), DQ rules, SQL
 ### 🧩 Data Architecture  
 Follows the **Medallion Pattern**:
 
-![Medallion Architecture](sandbox:/mnt/data/blinkit_architecture.png)
+![Medallion Architecture](docs/blinkit_architecture.png)
 
-Mermaid version: [`docs/architecture.md`](sandbox:/mnt/data/architecture.md)
 
 **Layers**  
 1. **Bronze:** Raw import (from Excel/CSV).  
@@ -44,20 +43,14 @@ Mermaid version: [`docs/architecture.md`](sandbox:/mnt/data/architecture.md)
 
 ---
 
-### 📦 Deliverables  
-| 📁 Deliverable | 🧾 Description |
+### 📦 Deliverables
+| 📁 Deliverable | 🧾 Location |
 |---|---|
-| **DDL/DML** | Silver table + (optional) Gold view/table scripts. |
-| **Stored Procedure** | Silver load procedure with comments, timing, and try/catch. |
-| **Analytical View** | Gold summary exposed as a **view** for live KPI rollups. |
-| **SQL QA Tests** | Full suite to reconcile Silver ↔ Gold. |
-| **Data Dictionary** | Data types, cleaning rules, and test specs. |
+| **Architecture image** | [`docs/blinkit_architecture.png`](docs/blinkit_architecture.png) |
+| **Power BI view screenshot** | [`docs/blinkit_powerbi_view.png`](docs/blinkit_powerbi_view.png) |
+| **SQL QA tests (Silver ↔ Gold)** | [`test/blinkit_sql_qa_tests.sql`](test/blinkit_sql_qa_tests.sql) |
+| **Data Dictionary & QA (Word)** | [`docs/Blinkit_Data_Dictionary_and_QA.docx`](docs/Blinkit_Data_Dictionary_and_QA.docx) |
 
-**Downloads**  
-- Architecture PNG: [blinkit_architecture.png](sandbox:/mnt/data/blinkit_architecture.png)  
-- Architecture (Mermaid): [architecture.md](sandbox:/mnt/data/architecture.md)  
-- SQL QA tests: [blinkit_sql_qa_tests.sql](sandbox:/mnt/data/blinkit_sql_qa_tests.sql)  
-- Data Dictionary & QA (Word): [Blinkit_Data_Dictionary_and_QA.docx](sandbox:/mnt/data/Blinkit_Data_Dictionary_and_QA.docx)
 
 ---
 
@@ -102,10 +95,11 @@ GO
 
 Run QA
 
-Execute: sql/tests/blinkit_sql_qa_tests.sql
+Execute:Execute: test/blinkit_sql_qa_tests.sql
 
 Validate Silver ↔ Gold equality on groups and KPIs.
 
+![Power BI Dashboard](docs/blinkit_powebi_view.png)
 Power BI
 
 Connect to SQL (Silver table + Gold view).
