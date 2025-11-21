@@ -43,6 +43,8 @@ Follows the **Medallion Pattern**:
 
 ---
 
+![Power BI Dashboard](docs/blinkit_powebi_view.png)
+
 ### 📦 Deliverables
 | 📁 Deliverable | 🧾 Location |
 |---|---|
@@ -99,7 +101,7 @@ Execute:Execute: test/blinkit_sql_qa_tests.sql
 
 Validate Silver ↔ Gold equality on groups and KPIs.
 
-![Power BI Dashboard](docs/blinkit_powebi_view.png)
+
 Power BI
 
 Connect to SQL (Silver table + Gold view).
